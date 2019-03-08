@@ -4,6 +4,8 @@ MAINTAINER Vasyl Petrushko <vassoz@gmail.com>
 
 RUN [ "cross-build-start" ]
 
+RUN apt-get install -y --no-install-recommends gnuplot-x11
+
 RUN echo 'blacklist dvb_usb_rtl28xxu' > /etc/modprobe.d/raspi-blacklist.conf
 
 WORKDIR /
